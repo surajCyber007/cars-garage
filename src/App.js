@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CarForm from "./components/CarForm";
+import CarSearch from "./components/CarSearch";
+import CarsList from "./components/CarsList";
+import CarsValue from "./components/CarsValue";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className="text-4xl font-bold text-center mb-5 shadow-md py-4 text-blue-500">
+        MY CAR LIST
+      </h1>
+      <CarForm />
+      <div className="flex justify-around">
+        <CarSearch />
+        <CarsValue />
+      </div>
+      <CarsList />
     </div>
   );
 }
